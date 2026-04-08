@@ -97,8 +97,8 @@ export function WorkspacePreview({ selection }: WorkspacePreviewProps) {
   const monitorCount = monitorSel ? Math.min(monitorSel.quantity, 2) : 0;
   const showLamp = lamp ? hasAccessory(selection, lamp.id) : false;
   const showPlant = plant ? hasAccessory(selection, plant.id) : false;
-  const deskModelPath = desk.modelPath;
-  const chairModelPath = chair.modelPath;
+  const deskModelPath = desk!.modelPath;
+  const chairModelPath = chair!.modelPath;
   const monitorModelPath = selectedMonitor?.modelPath;
   const lampModelPath = lamp?.modelPath;
   const plantModelPath = plant?.modelPath;

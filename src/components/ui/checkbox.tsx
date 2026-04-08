@@ -39,9 +39,10 @@ function CheckboxField({
   description,
   className,
   ...props
-}: CheckboxPrimitive.Root.Props & {
+}: Omit<CheckboxPrimitive.Root.Props, "className"> & {
   title: React.ReactNode;
   description?: React.ReactNode;
+  className?: string;
 }) {
   return (
     <FieldLabel className={className}>

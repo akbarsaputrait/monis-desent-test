@@ -48,9 +48,10 @@ function RadioGroupField({
   description,
   className,
   ...props
-}: RadioPrimitive.Root.Props & {
+}: Omit<RadioPrimitive.Root.Props, "className"> & {
   title: React.ReactNode;
   description?: React.ReactNode;
+  className?: string;
 }) {
   return (
     <FieldLabel className={className}>
