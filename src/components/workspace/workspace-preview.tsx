@@ -107,13 +107,13 @@ export function WorkspacePreview({ selection }: WorkspacePreviewProps) {
     monitorTransformPresets["monitor-27"];
 
   return (
-    <section className="relative h-[55vh] min-h-[340px] overflow-hidden rounded-3xl border bg-card shadow-sm lg:h-[calc(100vh-11rem)] lg:min-h-[600px]">
+    <section className="relative h-[40vh] min-h-[260px] overflow-hidden rounded-2xl border bg-card shadow-sm sm:h-[50vh] sm:min-h-[320px] sm:rounded-3xl lg:h-[calc(100vh-11rem)] lg:min-h-[600px]">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_0%,oklch(0.96_0.03_95),transparent_40%)]" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[40%] bg-[linear-gradient(to_top,oklch(0.93_0.01_85),transparent)]" />
 
-      <div className="absolute left-5 top-5 z-10 md:left-8 md:top-8">
-        <p className="text-sm text-muted-foreground">Live workspace preview</p>
-        <h2 className="text-xl font-semibold md:text-2xl">Design Your Setup</h2>
+      <div className="absolute left-4 top-3 z-10 sm:left-5 sm:top-5 md:left-8 md:top-8">
+        <p className="text-xs text-muted-foreground sm:text-sm">Live workspace preview</p>
+        <h2 className="text-base font-semibold sm:text-xl md:text-2xl">Design Your Setup</h2>
       </div>
 
       <div className="relative h-full w-full">

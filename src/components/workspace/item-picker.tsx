@@ -105,7 +105,7 @@ export function ItemPicker({
         className,
       )}
     >
-      <div className="flex gap-0.5 overflow-x-auto border-b border-border/40 px-2 pt-2 pb-1">
+      <div className="flex gap-0.5 overflow-x-auto border-b border-border/40 px-1.5 pt-1.5 pb-1 sm:px-2 sm:pt-2">
         {tabs.map((tab) => (
           <Button
             key={tab.id}
@@ -122,7 +122,7 @@ export function ItemPicker({
       {/* Tab content */}
       <div
         key={activeTab}
-        className="h-2xl flex flex-col gap-2 overflow-y-auto p-2 animate-fade-in"
+        className="flex max-h-[45vh] flex-col gap-1.5 overflow-y-auto p-2 animate-fade-in sm:gap-2 lg:max-h-[280px]"
       >
         {activeTab === "desk" && (
           <RadioGroup value={selection.deskId} onValueChange={(val: string) => onDeskSelect(val)}>

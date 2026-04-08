@@ -68,13 +68,12 @@ export function WorkspaceBuilder() {
 
   return (
     <div className="grid gap-3 lg:grid-cols-[1fr_280px] lg:items-start">
-      {/* Main area: preview + floating picker */}
       <div className="relative">
         <WorkspacePreview selection={selection} />
 
-        {/* Floating picker — centered at bottom of preview */}
+        {/* Floating picker — only on lg+ */}
         <div
-          className="absolute inset-x-0 bottom-3 z-20 px-3 animate-slide-up lg:bottom-4 lg:px-0"
+          className="hidden lg:block absolute inset-x-0 bottom-4 z-20 animate-slide-up"
           style={{ animationDelay: "150ms" }}
         >
           <div className="mx-auto w-full max-w-[580px]">
@@ -83,7 +82,11 @@ export function WorkspaceBuilder() {
         </div>
       </div>
 
-      {/* Sidebar: summary only */}
+      {/* Mobile picker — below preview */}
+      <div className="lg:hidden animate-slide-up" style={{ animationDelay: "150ms" }}>
+        <ItemPicker {...pickerProps} />
+      </div>
+
       <div style={{ animationDelay: "200ms" }}>
         <SetupSummary lines={summaryLines} total={monthlyTotal} />
       </div>
